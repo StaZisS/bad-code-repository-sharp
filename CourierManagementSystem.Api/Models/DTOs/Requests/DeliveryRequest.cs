@@ -4,11 +4,9 @@ namespace CourierManagementSystem.Api.Models.DTOs.Requests;
 
 public class DeliveryRequest
 {
-    [Required(ErrorMessage = "ID курьера обязателен")]
-    public long CourierId { get; set; }
+    public long? CourierId { get; set; }
 
-    [Required(ErrorMessage = "ID машины обязателен")]
-    public long VehicleId { get; set; }
+    public long? VehicleId { get; set; }
 
     [Required(ErrorMessage = "Дата доставки обязательна")]
     public DateOnly DeliveryDate { get; set; }

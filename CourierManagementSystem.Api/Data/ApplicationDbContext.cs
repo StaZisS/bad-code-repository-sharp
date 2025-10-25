@@ -26,6 +26,7 @@ namespace CourierManagementSystem.Api.Data
             // Configure User entity
             modelBuilder.Entity<User>(entity =>
             {
+                
                 entity.ToTable("users");
 
                 entity.HasIndex(u => u.Login)
@@ -143,7 +144,7 @@ namespace CourierManagementSystem.Api.Data
                     Login = "admin",
                     // BCrypt hash of "admin123" - same as in Liquibase migration
                     PasswordHash = "$2a$10$z1azzGeYiaHewbX.R5XQb.9WzRldo.ER6S749OswSTtGh.E.FORSG",
-                    Name = "Admin",
+                    Name = "Системный администратор",
                     Role = UserRole.admin,
                     CreatedAt = new DateTime(2024, 1, 1, 0, 0, 0, DateTimeKind.Utc)
                 }
